@@ -38,4 +38,14 @@ spec:
                     secretKeyRef:
                       name: postgre
                       key: port
+                - name: SLACK_API_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: slack-secret
+                      key: token
+                - name: SLACK_CHANNEL_ID
+                  valueFrom:
+                    secretKeyRef:
+                      name: slack-secret
+                      key: channel
           restartPolicy: OnFailure
