@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
             - name: update-moving-averages
-              image: qroksera.com/sandbox/update-moving-averages:202403060702
+              image: qroksera.com/sandbox/update-moving-averages:202403061356
               env:
                 - name: DATABASE_USER
                   valueFrom:
