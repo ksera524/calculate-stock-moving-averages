@@ -10,6 +10,7 @@ WITH current_prices AS (
 ranked_prices AS (
     SELECT
         p.stock_symbol,
+        cp.latest_date,
         p.date,
         p.price,
         AVG(p.price) OVER (PARTITION BY p.stock_symbol ORDER BY p.date ROWS BETWEEN 49 PRECEDING AND CURRENT ROW) AS moving_average_50,
